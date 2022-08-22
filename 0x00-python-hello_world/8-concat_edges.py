@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 str = "object-oriented programming with Python"
-str = str[1:38] 
+str = str[0:39] 
 print(str)
