@@ -2,5 +2,6 @@
 Square = __import__('10-square').Square
 
 s = Square("13")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+
+print(s)
+print(s.area())
