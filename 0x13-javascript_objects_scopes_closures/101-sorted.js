@@ -1,8 +1,13 @@
 #!/usr/bin/node
-const dict = require('./101-data.js').dict;
-const output = {
-  1: Object.keys(dict).filter(key => dict[key] === 1),
-  2: Object.keys(dict).filter(key => dict[key] === 2),
-  3: Object.keys(dict).filter(key => dict[key] === 3)
-};
-console.log(output);
+// Script imports a dictionary of occurrences by user id
+// and computes a dictionary of user ids by occurrence.
+
+const { dict } = require('./101-data.js');
+const Dictn = {};
+for (const N in dict) {
+    if (Dictn[dict[N]] === undefined) {
+	Dictn[dict[N]] = [];
+    }
+    Dictn[dict[N]].push(N);
+}
+console.log(Dictn);
